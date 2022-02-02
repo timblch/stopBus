@@ -19,3 +19,4 @@ D:\git\stopBus\busStop\obj\Debug\busStop.csproj.GenerateResource.cache
 D:\git\stopBus\busStop\obj\Debug\busStop.csproj.CoreCompileInputs.cache
 D:\git\stopBus\busStop\obj\Debug\busStop.exe
 D:\git\stopBus\busStop\obj\Debug\busStop.pdb
+C:\Users\Dell\source\repos\busStop\busStop\bin\Debug\bus.mdb

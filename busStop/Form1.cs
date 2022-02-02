@@ -27,6 +27,10 @@ namespace busStop
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "busDataSet1.db_bus". При необходимости она может быть перемещена или удалена.
+            this.db_busTableAdapter.Fill(this.busDataSet1.db_bus);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "busDataSet.bus". При необходимости она может быть перемещена или удалена.
+            this.busTableAdapter.Fill(this.busDataSet.bus);
             myConnection = new OleDbConnection(connect);
             myConnection.Open();
         }
@@ -94,6 +98,18 @@ namespace busStop
             OleDbCommand command = new OleDbCommand(query, myConnection);
 
             command.ExecuteNonQuery();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+   
+
+        private void textBox6_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox6.Clear();
         }
     }
 }
