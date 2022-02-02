@@ -45,7 +45,7 @@ namespace busStop
             string query = "SELECT FIO FROM bus WHERE w_id = 1";
 
             OleDbCommand command = new OleDbCommand(query, myConnection);
-            textBox5.Text = command.ExecuteScalar().ToString();
+            //textBox5.Text = command.ExecuteScalar().ToString();
 
         }
 
@@ -57,13 +57,13 @@ namespace busStop
 
             OleDbDataReader reader = command.ExecuteReader();
 
-            listBox1.Items.Clear();
+            //listBox1.Items.Clear();
 
             while (reader.Read())
             {
 
-                listBox1.Items.Add(reader[0].ToString() + " " + reader[1].ToString() + " " + reader[2].ToString() + " " + reader[3].ToString() + " " +
-                    reader[4].ToString() + " " + reader[5].ToString() + " ");
+                //listBox1.Items.Add(reader[0].ToString() + " " + reader[1].ToString() + " " + reader[2].ToString() + " " + reader[3].ToString() + " " +
+                   // reader[4].ToString() + " " + reader[5].ToString() + " ");
                 
             }
 
@@ -110,6 +110,46 @@ namespace busStop
         private void textBox6_MouseClick(object sender, MouseEventArgs e)
         {
             textBox6.Clear();
+        }
+
+        private void textBox7_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox7.Clear();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int kod = Convert.ToInt32(textBox9.Text);
+           string query = $"UPDATE db_bus SET db_status = 'Продлено' WHERE Код={kod}";
+
+           OleDbCommand command = new OleDbCommand(query, myConnection);
+           command.ExecuteNonQuery();
+           MessageBox.Show("Стоянка машины продлена");
+           this.db_busTableAdapter.Fill(this.busDataSet1.db_bus);
+            
+
+        }
+
+        private void textBox9_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox9.Clear();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();  
+            form2.ShowDialog();
+        }
+
+        private void click_seach_Click(object sender, EventArgs e)
+        {
+            string kod = textBox_fio.Text;
+            string query = $"SELECT * FROM db_bus WHERE db_name LIKE '%{kod}%'";
+            OleDbDataAdapter command = new OleDbDataAdapter(query, myConnection);
+            DataTable dt = new DataTable();
+            command.Fill(dt);
+            dataGridView1.DataSource = dt;
+
         }
     }
 }

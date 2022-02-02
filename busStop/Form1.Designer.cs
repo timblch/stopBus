@@ -49,15 +49,7 @@ namespace busStop
             this.textBox_gosnumber = new System.Windows.Forms.TextBox();
             this.textBox_fio = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -71,16 +63,28 @@ namespace busStop
             this.busBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.busTableAdapter = new busStop.busDataSetTableAdapters.busTableAdapter();
             this.db_busTableAdapter = new busStop.busDataSet1TableAdapters.db_busTableAdapter();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.button_add_date = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.busDataSet1)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.busBindingSource)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -88,10 +92,11 @@ namespace busStop
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1149, 426);
+            this.tabControl1.Size = new System.Drawing.Size(1177, 608);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -103,9 +108,9 @@ namespace busStop
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1141, 400);
+            this.tabPage1.Size = new System.Drawing.Size(1169, 582);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Стоянка";
+            this.tabPage1.Text = "Стоянка легковых ТС";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
@@ -125,9 +130,9 @@ namespace busStop
             this.dbsumdateDataGridViewTextBoxColumn,
             this.dbsumcashDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.dbbusBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 32);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 33);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1128, 362);
+            this.dataGridView1.Size = new System.Drawing.Size(1156, 543);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -212,6 +217,7 @@ namespace busStop
             this.click_seach.TabIndex = 2;
             this.click_seach.Text = "Поиск";
             this.click_seach.UseVisualStyleBackColor = true;
+            this.click_seach.Click += new System.EventHandler(this.click_seach_Click);
             // 
             // textBox_gosnumber
             // 
@@ -231,95 +237,27 @@ namespace busStop
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.dateTimePicker1);
-            this.tabPage2.Controls.Add(this.textBox4);
-            this.tabPage2.Controls.Add(this.textBox3);
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.textBox1);
-            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1141, 400);
+            this.tabPage2.Size = new System.Drawing.Size(1169, 582);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "+";
+            this.tabPage2.Text = "Микроавтобусы";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(139, 138);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(172, 20);
-            this.dateTimePicker1.TabIndex = 5;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(139, 111);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(172, 20);
-            this.textBox4.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(139, 84);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(172, 20);
-            this.textBox3.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(139, 58);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(343, 20);
-            this.textBox2.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(139, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(343, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(407, 166);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.listBox1);
-            this.tabPage3.Controls.Add(this.textBox5);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1141, 400);
+            this.tabPage3.Size = new System.Drawing.Size(1169, 582);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Автобусы";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(53, 93);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(405, 147);
-            this.listBox1.TabIndex = 1;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(53, 38);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(389, 20);
-            this.textBox5.TabIndex = 0;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1217, 187);
+            this.button2.Location = new System.Drawing.Point(130, 628);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -329,7 +267,7 @@ namespace busStop
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1167, 223);
+            this.button3.Location = new System.Drawing.Point(231, 628);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -339,7 +277,7 @@ namespace busStop
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1248, 223);
+            this.button4.Location = new System.Drawing.Point(330, 628);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 3;
@@ -349,7 +287,7 @@ namespace busStop
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(1207, 252);
+            this.button5.Location = new System.Drawing.Point(426, 628);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 4;
@@ -363,9 +301,9 @@ namespace busStop
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.button_add_tarif);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Location = new System.Drawing.Point(1170, 12);
+            this.groupBox1.Location = new System.Drawing.Point(1195, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(153, 169);
+            this.groupBox1.Size = new System.Drawing.Size(156, 169);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "- Тарифы -";
@@ -423,11 +361,129 @@ namespace busStop
             // 
             this.db_busTableAdapter.ClearBeforeFill = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button_add_date);
+            this.groupBox2.Controls.Add(this.textBox8);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Location = new System.Drawing.Point(1195, 207);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(156, 148);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "- Дата выезда -";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(16, 20);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(121, 20);
+            this.textBox7.TabIndex = 0;
+            this.textBox7.Text = "Код";
+            this.textBox7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox7_MouseClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "01.01.2022 09:00:00";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(17, 70);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(120, 20);
+            this.textBox8.TabIndex = 2;
+            this.textBox8.Text = "Введите дату и время";
+            // 
+            // button_add_date
+            // 
+            this.button_add_date.Location = new System.Drawing.Point(17, 105);
+            this.button_add_date.Name = "button_add_date";
+            this.button_add_date.Size = new System.Drawing.Size(120, 23);
+            this.button_add_date.TabIndex = 3;
+            this.button_add_date.Text = "Отметить выезд";
+            this.button_add_date.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textBox10);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.button6);
+            this.groupBox3.Controls.Add(this.textBox9);
+            this.groupBox3.Location = new System.Drawing.Point(1198, 387);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(153, 171);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "- Статус - ";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(14, 30);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(121, 20);
+            this.textBox9.TabIndex = 4;
+            this.textBox9.Text = "Код";
+            this.textBox9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox9_MouseClick);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(13, 125);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(120, 23);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Продлить стоянку";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(1198, 581);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(153, 23);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "Добавить ТС";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Количество суток";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(15, 90);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(120, 20);
+            this.textBox10.TabIndex = 7;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1169, 582);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Грузовые";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1350, 450);
+            this.ClientSize = new System.Drawing.Size(1360, 663);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -444,14 +500,14 @@ namespace busStop
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.busDataSet1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.busDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.busBindingSource)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -461,17 +517,9 @@ namespace busStop
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button click_seach;
@@ -499,6 +547,18 @@ namespace busStop
         private System.Windows.Forms.DataGridViewTextBoxColumn dbstatusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dbsumdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dbsumcashDataGridViewTextBoxColumn;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button button_add_date;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }
 
