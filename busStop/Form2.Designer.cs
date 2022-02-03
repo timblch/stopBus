@@ -112,6 +112,8 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "dd MMMM yyyy HH:mm";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(206, 213);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
@@ -204,6 +206,7 @@
             this.button_add_auto.Text = "Сохранить";
             this.button_add_auto.UseVisualStyleBackColor = true;
             this.button_add_auto.Click += new System.EventHandler(this.button_add_auto_Click);
+            this.button_add_auto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_add_auto_MouseClick);
             // 
             // Form2
             // 

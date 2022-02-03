@@ -144,9 +144,13 @@ namespace busStop
 
         }
 
-        public void myConnect()
+        public void gridUpdate()
         {
             this.db_busTableAdapter.Fill(this.busDataSet1.db_bus);
+            MessageBox.Show("Данные загружены");
+            this.db_busTableAdapter.Fill(this.busDataSet1.db_bus);
+
+
         }
   
         private void textBox9_MouseClick(object sender, MouseEventArgs e)
@@ -157,10 +161,13 @@ namespace busStop
 
         private void button7_Click(object sender, EventArgs e)
         {
-
-            myConnection.Close();
-            Form2 form2 = new Form2();  
-            form2.ShowDialog();
+            Form2 form = new Form2();
+            form.Owner = this;
+            form.ShowDialog();
+            //myConnection.Close();
+           // Form2 form2 = new Form2();
+            //Form2.Owner = this;
+           // form2.Show();
         }
 
         private void click_seach_Click(object sender, EventArgs e)
@@ -172,6 +179,11 @@ namespace busStop
             command.Fill(dt);
             dataGridView1.DataSource = dt;
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.db_busTableAdapter.Fill(this.busDataSet1.db_bus);
         }
     }
 }
