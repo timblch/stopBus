@@ -203,6 +203,7 @@
             this.button_add_auto.TabIndex = 9;
             this.button_add_auto.Text = "Сохранить";
             this.button_add_auto.UseVisualStyleBackColor = true;
+            this.button_add_auto.Click += new System.EventHandler(this.button_add_auto_Click);
             // 
             // Form2
             // 
@@ -228,6 +229,7 @@
             this.Controls.Add(this.comboBox1);
             this.Name = "Form2";
             this.Text = "Добавление ТС";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

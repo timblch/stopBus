@@ -22,3 +22,4 @@ D:\git\stopBus\busStop\obj\Debug\busStop.pdb
 C:\Users\Dell\source\repos\busStop\busStop\bin\Debug\bus.mdb
 D:\git\stopBus\busStop\bin\Debug\bus.mdb
 D:\git\stopBus\busStop\obj\Debug\busStop.Form2.resources
+C:\Users\Dell\source\repos\busStop\busStop\obj\Debug\busStop.Form2.resources

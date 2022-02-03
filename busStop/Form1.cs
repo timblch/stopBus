@@ -35,6 +35,8 @@ namespace busStop
             myConnection.Open();
         }
 
+      
+
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             myConnection.Close();
@@ -119,24 +121,44 @@ namespace busStop
 
         private void button6_Click(object sender, EventArgs e)
         {
-            int kod = Convert.ToInt32(textBox9.Text);
-           string query = $"UPDATE db_bus SET db_status = 'Продлено' WHERE Код={kod}";
 
-           OleDbCommand command = new OleDbCommand(query, myConnection);
-           command.ExecuteNonQuery();
-           MessageBox.Show("Стоянка машины продлена");
-           this.db_busTableAdapter.Fill(this.busDataSet1.db_bus);
+            try
+            {
+                myConnection.Open();
+            }
+            catch
+            {
+                int kod = Convert.ToInt32(textBox9.Text);
+                string query = $"UPDATE db_bus SET db_status = 'Продлено' WHERE Код={kod}";
+
+                OleDbCommand command = new OleDbCommand(query, myConnection);
+                command.ExecuteNonQuery();
+                MessageBox.Show("Стоянка машины продлена");
+                this.db_busTableAdapter.Fill(this.busDataSet1.db_bus);
+
+            }
+            
+            
+            
             
 
         }
 
+        public void myConnect()
+        {
+            this.db_busTableAdapter.Fill(this.busDataSet1.db_bus);
+        }
+  
         private void textBox9_MouseClick(object sender, MouseEventArgs e)
         {
             textBox9.Clear();
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+
+            myConnection.Close();
             Form2 form2 = new Form2();  
             form2.ShowDialog();
         }
