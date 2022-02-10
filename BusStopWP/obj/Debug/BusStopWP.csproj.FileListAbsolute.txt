@@ -1,0 +1,11 @@
+C:\Users\Dell\source\repos\busStop\BusStopWP\bin\Debug\BusStopWP.exe.config
+C:\Users\Dell\source\repos\busStop\BusStopWP\bin\Debug\BusStopWP.exe
+C:\Users\Dell\source\repos\busStop\BusStopWP\bin\Debug\BusStopWP.pdb
+C:\Users\Dell\source\repos\busStop\BusStopWP\obj\Debug\BusStopWP.csprojAssemblyReference.cache
+C:\Users\Dell\source\repos\busStop\BusStopWP\obj\Debug\BusStopWP.Form1.resources
+C:\Users\Dell\source\repos\busStop\BusStopWP\obj\Debug\BusStopWP.Properties.Resources.resources
+C:\Users\Dell\source\repos\busStop\BusStopWP\obj\Debug\BusStopWP.csproj.GenerateResource.cache
+C:\Users\Dell\source\repos\busStop\BusStopWP\obj\Debug\BusStopWP.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\busStop\BusStopWP\obj\Debug\BusStopWP.exe
+C:\Users\Dell\source\repos\busStop\BusStopWP\obj\Debug\BusStopWP.pdb
+C:\Users\Dell\source\repos\busStop\BusStopWP\obj\Debug\BusStopWP.FormAdmin.resources
