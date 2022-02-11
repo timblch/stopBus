@@ -72,6 +72,9 @@
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDB.resx">
+      <DependentUpon>FormDB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -80,6 +83,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -93,6 +97,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\iconsplus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\iconsplus30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\icons8menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\icons8exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\iconssize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\icons8minsize.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
