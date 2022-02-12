@@ -56,6 +56,23 @@ namespace BusStopWP
             this.textBox_gosnumber = new System.Windows.Forms.TextBox();
             this.click_seach = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.busstopDataSet = new BusStopWP.busstopDataSet();
+            this.dbbusBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.db_busTableAdapter = new BusStopWP.busstopDataSetTableAdapters.db_busTableAdapter();
+            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dbnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dbadressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dbgosnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dbmarkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dbmodelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dbdatevDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dbdatevvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dbstatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dbtipstsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dbsumdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dbsumcashDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dbmestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dbuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siderbarContainer.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -69,6 +86,8 @@ namespace BusStopWP
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // siderbarContainer
@@ -345,12 +364,127 @@ namespace BusStopWP
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.кодDataGridViewTextBoxColumn,
+            this.dbnameDataGridViewTextBoxColumn,
+            this.dbadressDataGridViewTextBoxColumn,
+            this.dbgosnumberDataGridViewTextBoxColumn,
+            this.dbmarkaDataGridViewTextBoxColumn,
+            this.dbmodelDataGridViewTextBoxColumn,
+            this.dbdatevDataGridViewTextBoxColumn,
+            this.dbdatevvDataGridViewTextBoxColumn,
+            this.dbstatusDataGridViewTextBoxColumn,
+            this.dbtipstsDataGridViewTextBoxColumn,
+            this.dbsumdateDataGridViewTextBoxColumn,
+            this.dbsumcashDataGridViewTextBoxColumn,
+            this.dbmestoDataGridViewTextBoxColumn,
+            this.dbuserDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.dbbusBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(81, 65);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1100, 584);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // busstopDataSet
+            // 
+            this.busstopDataSet.DataSetName = "busstopDataSet";
+            this.busstopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dbbusBindingSource
+            // 
+            this.dbbusBindingSource.DataMember = "db_bus";
+            this.dbbusBindingSource.DataSource = this.busstopDataSet;
+            // 
+            // db_busTableAdapter
+            // 
+            this.db_busTableAdapter.ClearBeforeFill = true;
+            // 
+            // кодDataGridViewTextBoxColumn
+            // 
+            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
+            // 
+            // dbnameDataGridViewTextBoxColumn
+            // 
+            this.dbnameDataGridViewTextBoxColumn.DataPropertyName = "db_name";
+            this.dbnameDataGridViewTextBoxColumn.HeaderText = "db_name";
+            this.dbnameDataGridViewTextBoxColumn.Name = "dbnameDataGridViewTextBoxColumn";
+            // 
+            // dbadressDataGridViewTextBoxColumn
+            // 
+            this.dbadressDataGridViewTextBoxColumn.DataPropertyName = "db_adress";
+            this.dbadressDataGridViewTextBoxColumn.HeaderText = "db_adress";
+            this.dbadressDataGridViewTextBoxColumn.Name = "dbadressDataGridViewTextBoxColumn";
+            // 
+            // dbgosnumberDataGridViewTextBoxColumn
+            // 
+            this.dbgosnumberDataGridViewTextBoxColumn.DataPropertyName = "db_gosnumber";
+            this.dbgosnumberDataGridViewTextBoxColumn.HeaderText = "db_gosnumber";
+            this.dbgosnumberDataGridViewTextBoxColumn.Name = "dbgosnumberDataGridViewTextBoxColumn";
+            // 
+            // dbmarkaDataGridViewTextBoxColumn
+            // 
+            this.dbmarkaDataGridViewTextBoxColumn.DataPropertyName = "db_marka";
+            this.dbmarkaDataGridViewTextBoxColumn.HeaderText = "db_marka";
+            this.dbmarkaDataGridViewTextBoxColumn.Name = "dbmarkaDataGridViewTextBoxColumn";
+            // 
+            // dbmodelDataGridViewTextBoxColumn
+            // 
+            this.dbmodelDataGridViewTextBoxColumn.DataPropertyName = "db_model";
+            this.dbmodelDataGridViewTextBoxColumn.HeaderText = "db_model";
+            this.dbmodelDataGridViewTextBoxColumn.Name = "dbmodelDataGridViewTextBoxColumn";
+            // 
+            // dbdatevDataGridViewTextBoxColumn
+            // 
+            this.dbdatevDataGridViewTextBoxColumn.DataPropertyName = "db_date_v";
+            this.dbdatevDataGridViewTextBoxColumn.HeaderText = "db_date_v";
+            this.dbdatevDataGridViewTextBoxColumn.Name = "dbdatevDataGridViewTextBoxColumn";
+            // 
+            // dbdatevvDataGridViewTextBoxColumn
+            // 
+            this.dbdatevvDataGridViewTextBoxColumn.DataPropertyName = "db_date_vv";
+            this.dbdatevvDataGridViewTextBoxColumn.HeaderText = "db_date_vv";
+            this.dbdatevvDataGridViewTextBoxColumn.Name = "dbdatevvDataGridViewTextBoxColumn";
+            // 
+            // dbstatusDataGridViewTextBoxColumn
+            // 
+            this.dbstatusDataGridViewTextBoxColumn.DataPropertyName = "db_status";
+            this.dbstatusDataGridViewTextBoxColumn.HeaderText = "db_status";
+            this.dbstatusDataGridViewTextBoxColumn.Name = "dbstatusDataGridViewTextBoxColumn";
+            // 
+            // dbtipstsDataGridViewTextBoxColumn
+            // 
+            this.dbtipstsDataGridViewTextBoxColumn.DataPropertyName = "db_tipsts";
+            this.dbtipstsDataGridViewTextBoxColumn.HeaderText = "db_tipsts";
+            this.dbtipstsDataGridViewTextBoxColumn.Name = "dbtipstsDataGridViewTextBoxColumn";
+            // 
+            // dbsumdateDataGridViewTextBoxColumn
+            // 
+            this.dbsumdateDataGridViewTextBoxColumn.DataPropertyName = "db_sumdate";
+            this.dbsumdateDataGridViewTextBoxColumn.HeaderText = "db_sumdate";
+            this.dbsumdateDataGridViewTextBoxColumn.Name = "dbsumdateDataGridViewTextBoxColumn";
+            // 
+            // dbsumcashDataGridViewTextBoxColumn
+            // 
+            this.dbsumcashDataGridViewTextBoxColumn.DataPropertyName = "db_sumcash";
+            this.dbsumcashDataGridViewTextBoxColumn.HeaderText = "db_sumcash";
+            this.dbsumcashDataGridViewTextBoxColumn.Name = "dbsumcashDataGridViewTextBoxColumn";
+            // 
+            // dbmestoDataGridViewTextBoxColumn
+            // 
+            this.dbmestoDataGridViewTextBoxColumn.DataPropertyName = "db_mesto";
+            this.dbmestoDataGridViewTextBoxColumn.HeaderText = "db_mesto";
+            this.dbmestoDataGridViewTextBoxColumn.Name = "dbmestoDataGridViewTextBoxColumn";
+            // 
+            // dbuserDataGridViewTextBoxColumn
+            // 
+            this.dbuserDataGridViewTextBoxColumn.DataPropertyName = "db_user";
+            this.dbuserDataGridViewTextBoxColumn.HeaderText = "db_user";
+            this.dbuserDataGridViewTextBoxColumn.Name = "dbuserDataGridViewTextBoxColumn";
             // 
             // FormDB
             // 
@@ -369,6 +503,7 @@ namespace BusStopWP
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "636363636363636363636363636363636363636363636363636363636363636363636363636363636" +
     "3636363636363636385555555558/8/8/";
+            this.Load += new System.EventHandler(this.FormDB_Load);
             this.siderbarContainer.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -387,6 +522,8 @@ namespace BusStopWP
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -419,5 +556,22 @@ namespace BusStopWP
         private System.Windows.Forms.TextBox textBox_gosnumber;
         private System.Windows.Forms.Button click_seach;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private busstopDataSet busstopDataSet;
+        private System.Windows.Forms.BindingSource dbbusBindingSource;
+        private busstopDataSetTableAdapters.db_busTableAdapter db_busTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn кодDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dbnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dbadressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dbgosnumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dbmarkaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dbmodelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dbdatevDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dbdatevvDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dbstatusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dbtipstsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dbsumdateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dbsumcashDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dbmestoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dbuserDataGridViewTextBoxColumn;
     }
 }

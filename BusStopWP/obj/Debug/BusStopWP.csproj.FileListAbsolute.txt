@@ -22,3 +22,5 @@ D:\git\stopBus\BusStopWP\BusStopWP\obj\Debug\BusStopWP.csproj.GenerateResource.c
 D:\git\stopBus\BusStopWP\BusStopWP\obj\Debug\BusStopWP.csproj.CoreCompileInputs.cache
 D:\git\stopBus\BusStopWP\BusStopWP\obj\Debug\BusStopWP.exe
 D:\git\stopBus\BusStopWP\BusStopWP\obj\Debug\BusStopWP.pdb
+C:\Users\Dell\source\repos\busStop\BusStopWP\bin\Debug\busstop.mdb
+C:\Users\Dell\source\repos\busStop\BusStopWP\obj\Debug\BusStopWP.FormDB.resources

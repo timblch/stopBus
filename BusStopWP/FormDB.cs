@@ -84,5 +84,12 @@ namespace BusStopWP
             Application.Exit();
             
         }
+
+        private void FormDB_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "busstopDataSet.db_bus". При необходимости она может быть перемещена или удалена.
+            this.db_busTableAdapter.Fill(this.busstopDataSet.db_bus);
+
+        }
     }
 }
