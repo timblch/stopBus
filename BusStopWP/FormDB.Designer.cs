@@ -33,9 +33,7 @@ namespace BusStopWP
             this.siderbarContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.menuButton = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelData = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -46,18 +44,15 @@ namespace BusStopWP
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.siderTimer = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.textBox_fio = new System.Windows.Forms.TextBox();
             this.textBox_gosnumber = new System.Windows.Forms.TextBox();
             this.click_seach = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.busstopDataSet = new BusStopWP.busstopDataSet();
             this.dbbusBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.busstopDataSet = new BusStopWP.busstopDataSet();
             this.db_busTableAdapter = new BusStopWP.busstopDataSetTableAdapters.db_busTableAdapter();
             this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dbnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,21 +68,26 @@ namespace BusStopWP
             this.dbsumcashDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dbmestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dbuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.menuButton = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.siderbarContainer.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelData.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panelStatus.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.SuspendLayout();
             // 
             // siderbarContainer
@@ -101,10 +101,10 @@ namespace BusStopWP
             this.siderbarContainer.Controls.Add(this.panelStatus);
             this.siderbarContainer.Controls.Add(this.button3);
             this.siderbarContainer.Location = new System.Drawing.Point(-1, 0);
-            this.siderbarContainer.MaximumSize = new System.Drawing.Size(200, 0);
-            this.siderbarContainer.MinimumSize = new System.Drawing.Size(76, 661);
+            this.siderbarContainer.MaximumSize = new System.Drawing.Size(201, 0);
+            this.siderbarContainer.MinimumSize = new System.Drawing.Size(76, 662);
             this.siderbarContainer.Name = "siderbarContainer";
-            this.siderbarContainer.Size = new System.Drawing.Size(76, 661);
+            this.siderbarContainer.Size = new System.Drawing.Size(76, 662);
             this.siderbarContainer.TabIndex = 0;
             // 
             // panel1
@@ -126,18 +126,6 @@ namespace BusStopWP
             this.label1.TabIndex = 1;
             this.label1.Text = "Меню";
             // 
-            // menuButton
-            // 
-            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menuButton.Image = global::BusStopWP.Properties.Resources.icons8menu;
-            this.menuButton.Location = new System.Drawing.Point(23, 38);
-            this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(30, 27);
-            this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.menuButton.TabIndex = 0;
-            this.menuButton.TabStop = false;
-            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.button1);
@@ -145,21 +133,6 @@ namespace BusStopWP
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(197, 35);
             this.panel2.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = global::BusStopWP.Properties.Resources.iconsplus30;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-5, -5);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(263, 46);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "             Добавить";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // panelData
             // 
@@ -188,7 +161,7 @@ namespace BusStopWP
             this.dateTimePicker1.CustomFormat = "dd MMMM yyyy HH:mm";
             this.dateTimePicker1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 49);
+            this.dateTimePicker1.Location = new System.Drawing.Point(6, 50);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(179, 22);
             this.dateTimePicker1.TabIndex = 4;
@@ -197,7 +170,7 @@ namespace BusStopWP
             // 
             this.button_add_date.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button_add_date.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_add_date.Location = new System.Drawing.Point(14, 77);
+            this.button_add_date.Location = new System.Drawing.Point(14, 76);
             this.button_add_date.Name = "button_add_date";
             this.button_add_date.Size = new System.Drawing.Size(156, 33);
             this.button_add_date.TabIndex = 3;
@@ -239,12 +212,13 @@ namespace BusStopWP
             // 
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(14, 77);
+            this.button2.Location = new System.Drawing.Point(14, 76);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(156, 33);
             this.button2.TabIndex = 3;
             this.button2.Text = "Продлить стоянку";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox1
             // 
@@ -257,28 +231,11 @@ namespace BusStopWP
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(6, 49);
+            this.textBox10.Location = new System.Drawing.Point(6, 50);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(179, 22);
             this.textBox10.TabIndex = 8;
             this.textBox10.Text = "Количество суток";
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Image = global::BusStopWP.Properties.Resources.icons8exit;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(3, 464);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(263, 46);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "             Выход";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // siderTimer
             // 
@@ -295,6 +252,236 @@ namespace BusStopWP
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(91, 27);
             this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel2.Controls.Add(this.textBox_fio);
+            this.flowLayoutPanel2.Controls.Add(this.textBox_gosnumber);
+            this.flowLayoutPanel2.Controls.Add(this.click_seach);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(204, 30);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(978, 38);
+            this.flowLayoutPanel2.TabIndex = 2;
+            // 
+            // textBox_fio
+            // 
+            this.textBox_fio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_fio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_fio.Location = new System.Drawing.Point(3, 3);
+            this.textBox_fio.Name = "textBox_fio";
+            this.textBox_fio.Size = new System.Drawing.Size(187, 22);
+            this.textBox_fio.TabIndex = 3;
+            this.textBox_fio.Text = "Поиск по фамилии";
+            // 
+            // textBox_gosnumber
+            // 
+            this.textBox_gosnumber.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_gosnumber.Location = new System.Drawing.Point(196, 3);
+            this.textBox_gosnumber.Name = "textBox_gosnumber";
+            this.textBox_gosnumber.Size = new System.Drawing.Size(183, 22);
+            this.textBox_gosnumber.TabIndex = 4;
+            this.textBox_gosnumber.Text = "Поиск по номеру";
+            // 
+            // click_seach
+            // 
+            this.click_seach.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.click_seach.Location = new System.Drawing.Point(385, 3);
+            this.click_seach.Name = "click_seach";
+            this.click_seach.Size = new System.Drawing.Size(95, 22);
+            this.click_seach.TabIndex = 5;
+            this.click_seach.Text = "Поиск";
+            this.click_seach.UseVisualStyleBackColor = true;
+            this.click_seach.Click += new System.EventHandler(this.click_seach_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.кодDataGridViewTextBoxColumn,
+            this.dbnameDataGridViewTextBoxColumn,
+            this.dbadressDataGridViewTextBoxColumn,
+            this.dbgosnumberDataGridViewTextBoxColumn,
+            this.dbmarkaDataGridViewTextBoxColumn,
+            this.dbmodelDataGridViewTextBoxColumn,
+            this.dbdatevDataGridViewTextBoxColumn,
+            this.dbdatevvDataGridViewTextBoxColumn,
+            this.dbstatusDataGridViewTextBoxColumn,
+            this.dbtipstsDataGridViewTextBoxColumn,
+            this.dbsumdateDataGridViewTextBoxColumn,
+            this.dbsumcashDataGridViewTextBoxColumn,
+            this.dbmestoDataGridViewTextBoxColumn,
+            this.dbuserDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.dbbusBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(81, 65);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(1101, 584);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // dbbusBindingSource
+            // 
+            this.dbbusBindingSource.DataMember = "db_bus";
+            this.dbbusBindingSource.DataSource = this.busstopDataSet;
+            // 
+            // busstopDataSet
+            // 
+            this.busstopDataSet.DataSetName = "busstopDataSet";
+            this.busstopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // db_busTableAdapter
+            // 
+            this.db_busTableAdapter.ClearBeforeFill = true;
+            // 
+            // кодDataGridViewTextBoxColumn
+            // 
+            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn.FillWeight = 35.35F;
+            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
+            this.кодDataGridViewTextBoxColumn.ReadOnly = true;
+            this.кодDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.кодDataGridViewTextBoxColumn.Width = 45;
+            // 
+            // dbnameDataGridViewTextBoxColumn
+            // 
+            this.dbnameDataGridViewTextBoxColumn.DataPropertyName = "db_name";
+            this.dbnameDataGridViewTextBoxColumn.FillWeight = 250.25F;
+            this.dbnameDataGridViewTextBoxColumn.HeaderText = "ФИО";
+            this.dbnameDataGridViewTextBoxColumn.Name = "dbnameDataGridViewTextBoxColumn";
+            this.dbnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dbnameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dbnameDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // dbadressDataGridViewTextBoxColumn
+            // 
+            this.dbadressDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dbadressDataGridViewTextBoxColumn.DataPropertyName = "db_adress";
+            this.dbadressDataGridViewTextBoxColumn.FillWeight = 100.1F;
+            this.dbadressDataGridViewTextBoxColumn.HeaderText = "Адрес";
+            this.dbadressDataGridViewTextBoxColumn.MinimumWidth = 100;
+            this.dbadressDataGridViewTextBoxColumn.Name = "dbadressDataGridViewTextBoxColumn";
+            this.dbadressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dbgosnumberDataGridViewTextBoxColumn
+            // 
+            this.dbgosnumberDataGridViewTextBoxColumn.DataPropertyName = "db_gosnumber";
+            this.dbgosnumberDataGridViewTextBoxColumn.FillWeight = 50.42395F;
+            this.dbgosnumberDataGridViewTextBoxColumn.HeaderText = "Гос номер";
+            this.dbgosnumberDataGridViewTextBoxColumn.MinimumWidth = 95;
+            this.dbgosnumberDataGridViewTextBoxColumn.Name = "dbgosnumberDataGridViewTextBoxColumn";
+            this.dbgosnumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dbgosnumberDataGridViewTextBoxColumn.Width = 95;
+            // 
+            // dbmarkaDataGridViewTextBoxColumn
+            // 
+            this.dbmarkaDataGridViewTextBoxColumn.DataPropertyName = "db_marka";
+            this.dbmarkaDataGridViewTextBoxColumn.FillWeight = 8.42395F;
+            this.dbmarkaDataGridViewTextBoxColumn.HeaderText = "Марка";
+            this.dbmarkaDataGridViewTextBoxColumn.MinimumWidth = 75;
+            this.dbmarkaDataGridViewTextBoxColumn.Name = "dbmarkaDataGridViewTextBoxColumn";
+            this.dbmarkaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dbmarkaDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // dbmodelDataGridViewTextBoxColumn
+            // 
+            this.dbmodelDataGridViewTextBoxColumn.DataPropertyName = "db_model";
+            this.dbmodelDataGridViewTextBoxColumn.FillWeight = 8.42395F;
+            this.dbmodelDataGridViewTextBoxColumn.HeaderText = "Модель";
+            this.dbmodelDataGridViewTextBoxColumn.MinimumWidth = 75;
+            this.dbmodelDataGridViewTextBoxColumn.Name = "dbmodelDataGridViewTextBoxColumn";
+            this.dbmodelDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dbmodelDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // dbdatevDataGridViewTextBoxColumn
+            // 
+            this.dbdatevDataGridViewTextBoxColumn.DataPropertyName = "db_date_v";
+            this.dbdatevDataGridViewTextBoxColumn.FillWeight = 8.42395F;
+            this.dbdatevDataGridViewTextBoxColumn.HeaderText = "Дата заезда";
+            this.dbdatevDataGridViewTextBoxColumn.MinimumWidth = 140;
+            this.dbdatevDataGridViewTextBoxColumn.Name = "dbdatevDataGridViewTextBoxColumn";
+            this.dbdatevDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dbdatevDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // dbdatevvDataGridViewTextBoxColumn
+            // 
+            this.dbdatevvDataGridViewTextBoxColumn.DataPropertyName = "db_date_vv";
+            this.dbdatevvDataGridViewTextBoxColumn.FillWeight = 8.42395F;
+            this.dbdatevvDataGridViewTextBoxColumn.HeaderText = "Дата выезда";
+            this.dbdatevvDataGridViewTextBoxColumn.MinimumWidth = 140;
+            this.dbdatevvDataGridViewTextBoxColumn.Name = "dbdatevvDataGridViewTextBoxColumn";
+            this.dbdatevvDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dbdatevvDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // dbstatusDataGridViewTextBoxColumn
+            // 
+            this.dbstatusDataGridViewTextBoxColumn.DataPropertyName = "db_status";
+            this.dbstatusDataGridViewTextBoxColumn.FillWeight = 8.42395F;
+            this.dbstatusDataGridViewTextBoxColumn.HeaderText = "Статус";
+            this.dbstatusDataGridViewTextBoxColumn.MinimumWidth = 75;
+            this.dbstatusDataGridViewTextBoxColumn.Name = "dbstatusDataGridViewTextBoxColumn";
+            this.dbstatusDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dbstatusDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // dbtipstsDataGridViewTextBoxColumn
+            // 
+            this.dbtipstsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dbtipstsDataGridViewTextBoxColumn.DataPropertyName = "db_tipsts";
+            this.dbtipstsDataGridViewTextBoxColumn.FillWeight = 8.42395F;
+            this.dbtipstsDataGridViewTextBoxColumn.HeaderText = "Тип ТС";
+            this.dbtipstsDataGridViewTextBoxColumn.MinimumWidth = 95;
+            this.dbtipstsDataGridViewTextBoxColumn.Name = "dbtipstsDataGridViewTextBoxColumn";
+            this.dbtipstsDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dbsumdateDataGridViewTextBoxColumn
+            // 
+            this.dbsumdateDataGridViewTextBoxColumn.DataPropertyName = "db_sumdate";
+            this.dbsumdateDataGridViewTextBoxColumn.FillWeight = 8.42395F;
+            this.dbsumdateDataGridViewTextBoxColumn.HeaderText = "Сутки";
+            this.dbsumdateDataGridViewTextBoxColumn.MinimumWidth = 75;
+            this.dbsumdateDataGridViewTextBoxColumn.Name = "dbsumdateDataGridViewTextBoxColumn";
+            this.dbsumdateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dbsumdateDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // dbsumcashDataGridViewTextBoxColumn
+            // 
+            this.dbsumcashDataGridViewTextBoxColumn.DataPropertyName = "db_sumcash";
+            this.dbsumcashDataGridViewTextBoxColumn.FillWeight = 8.42395F;
+            this.dbsumcashDataGridViewTextBoxColumn.HeaderText = "Цена";
+            this.dbsumcashDataGridViewTextBoxColumn.MinimumWidth = 75;
+            this.dbsumcashDataGridViewTextBoxColumn.Name = "dbsumcashDataGridViewTextBoxColumn";
+            this.dbsumcashDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dbsumcashDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // dbmestoDataGridViewTextBoxColumn
+            // 
+            this.dbmestoDataGridViewTextBoxColumn.DataPropertyName = "db_mesto";
+            this.dbmestoDataGridViewTextBoxColumn.FillWeight = 8.42395F;
+            this.dbmestoDataGridViewTextBoxColumn.HeaderText = "Место";
+            this.dbmestoDataGridViewTextBoxColumn.MinimumWidth = 75;
+            this.dbmestoDataGridViewTextBoxColumn.Name = "dbmestoDataGridViewTextBoxColumn";
+            this.dbmestoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dbmestoDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // dbuserDataGridViewTextBoxColumn
+            // 
+            this.dbuserDataGridViewTextBoxColumn.DataPropertyName = "db_user";
+            this.dbuserDataGridViewTextBoxColumn.FillWeight = 8.42395F;
+            this.dbuserDataGridViewTextBoxColumn.HeaderText = "Пользователь";
+            this.dbuserDataGridViewTextBoxColumn.MinimumWidth = 150;
+            this.dbuserDataGridViewTextBoxColumn.Name = "dbuserDataGridViewTextBoxColumn";
+            this.dbuserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dbuserDataGridViewTextBoxColumn.Width = 250;
             // 
             // pictureBox1
             // 
@@ -319,186 +506,64 @@ namespace BusStopWP
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // flowLayoutPanel2
+            // menuButton
             // 
-            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel2.Controls.Add(this.textBox_fio);
-            this.flowLayoutPanel2.Controls.Add(this.textBox_gosnumber);
-            this.flowLayoutPanel2.Controls.Add(this.click_seach);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(205, 30);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(979, 38);
-            this.flowLayoutPanel2.TabIndex = 2;
+            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menuButton.Image = global::BusStopWP.Properties.Resources.icons8menu;
+            this.menuButton.Location = new System.Drawing.Point(23, 38);
+            this.menuButton.Name = "menuButton";
+            this.menuButton.Size = new System.Drawing.Size(30, 27);
+            this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.menuButton.TabIndex = 0;
+            this.menuButton.TabStop = false;
+            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
             // 
-            // textBox_fio
+            // button1
             // 
-            this.textBox_fio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_fio.Location = new System.Drawing.Point(3, 3);
-            this.textBox_fio.Name = "textBox_fio";
-            this.textBox_fio.Size = new System.Drawing.Size(186, 26);
-            this.textBox_fio.TabIndex = 3;
-            this.textBox_fio.Text = "Поиск по фамилии";
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Image = global::BusStopWP.Properties.Resources.iconsplus30;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(-5, -4);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(264, 46);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "             Добавить";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox_gosnumber
+            // button3
             // 
-            this.textBox_gosnumber.Location = new System.Drawing.Point(195, 3);
-            this.textBox_gosnumber.Name = "textBox_gosnumber";
-            this.textBox_gosnumber.Size = new System.Drawing.Size(183, 26);
-            this.textBox_gosnumber.TabIndex = 4;
-            this.textBox_gosnumber.Text = "Поиск по номеру";
-            // 
-            // click_seach
-            // 
-            this.click_seach.Location = new System.Drawing.Point(384, 3);
-            this.click_seach.Name = "click_seach";
-            this.click_seach.Size = new System.Drawing.Size(95, 23);
-            this.click_seach.TabIndex = 5;
-            this.click_seach.Text = "Поиск";
-            this.click_seach.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.кодDataGridViewTextBoxColumn,
-            this.dbnameDataGridViewTextBoxColumn,
-            this.dbadressDataGridViewTextBoxColumn,
-            this.dbgosnumberDataGridViewTextBoxColumn,
-            this.dbmarkaDataGridViewTextBoxColumn,
-            this.dbmodelDataGridViewTextBoxColumn,
-            this.dbdatevDataGridViewTextBoxColumn,
-            this.dbdatevvDataGridViewTextBoxColumn,
-            this.dbstatusDataGridViewTextBoxColumn,
-            this.dbtipstsDataGridViewTextBoxColumn,
-            this.dbsumdateDataGridViewTextBoxColumn,
-            this.dbsumcashDataGridViewTextBoxColumn,
-            this.dbmestoDataGridViewTextBoxColumn,
-            this.dbuserDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.dbbusBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(81, 65);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1100, 584);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // busstopDataSet
-            // 
-            this.busstopDataSet.DataSetName = "busstopDataSet";
-            this.busstopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dbbusBindingSource
-            // 
-            this.dbbusBindingSource.DataMember = "db_bus";
-            this.dbbusBindingSource.DataSource = this.busstopDataSet;
-            // 
-            // db_busTableAdapter
-            // 
-            this.db_busTableAdapter.ClearBeforeFill = true;
-            // 
-            // кодDataGridViewTextBoxColumn
-            // 
-            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
-            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
-            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
-            // 
-            // dbnameDataGridViewTextBoxColumn
-            // 
-            this.dbnameDataGridViewTextBoxColumn.DataPropertyName = "db_name";
-            this.dbnameDataGridViewTextBoxColumn.HeaderText = "db_name";
-            this.dbnameDataGridViewTextBoxColumn.Name = "dbnameDataGridViewTextBoxColumn";
-            // 
-            // dbadressDataGridViewTextBoxColumn
-            // 
-            this.dbadressDataGridViewTextBoxColumn.DataPropertyName = "db_adress";
-            this.dbadressDataGridViewTextBoxColumn.HeaderText = "db_adress";
-            this.dbadressDataGridViewTextBoxColumn.Name = "dbadressDataGridViewTextBoxColumn";
-            // 
-            // dbgosnumberDataGridViewTextBoxColumn
-            // 
-            this.dbgosnumberDataGridViewTextBoxColumn.DataPropertyName = "db_gosnumber";
-            this.dbgosnumberDataGridViewTextBoxColumn.HeaderText = "db_gosnumber";
-            this.dbgosnumberDataGridViewTextBoxColumn.Name = "dbgosnumberDataGridViewTextBoxColumn";
-            // 
-            // dbmarkaDataGridViewTextBoxColumn
-            // 
-            this.dbmarkaDataGridViewTextBoxColumn.DataPropertyName = "db_marka";
-            this.dbmarkaDataGridViewTextBoxColumn.HeaderText = "db_marka";
-            this.dbmarkaDataGridViewTextBoxColumn.Name = "dbmarkaDataGridViewTextBoxColumn";
-            // 
-            // dbmodelDataGridViewTextBoxColumn
-            // 
-            this.dbmodelDataGridViewTextBoxColumn.DataPropertyName = "db_model";
-            this.dbmodelDataGridViewTextBoxColumn.HeaderText = "db_model";
-            this.dbmodelDataGridViewTextBoxColumn.Name = "dbmodelDataGridViewTextBoxColumn";
-            // 
-            // dbdatevDataGridViewTextBoxColumn
-            // 
-            this.dbdatevDataGridViewTextBoxColumn.DataPropertyName = "db_date_v";
-            this.dbdatevDataGridViewTextBoxColumn.HeaderText = "db_date_v";
-            this.dbdatevDataGridViewTextBoxColumn.Name = "dbdatevDataGridViewTextBoxColumn";
-            // 
-            // dbdatevvDataGridViewTextBoxColumn
-            // 
-            this.dbdatevvDataGridViewTextBoxColumn.DataPropertyName = "db_date_vv";
-            this.dbdatevvDataGridViewTextBoxColumn.HeaderText = "db_date_vv";
-            this.dbdatevvDataGridViewTextBoxColumn.Name = "dbdatevvDataGridViewTextBoxColumn";
-            // 
-            // dbstatusDataGridViewTextBoxColumn
-            // 
-            this.dbstatusDataGridViewTextBoxColumn.DataPropertyName = "db_status";
-            this.dbstatusDataGridViewTextBoxColumn.HeaderText = "db_status";
-            this.dbstatusDataGridViewTextBoxColumn.Name = "dbstatusDataGridViewTextBoxColumn";
-            // 
-            // dbtipstsDataGridViewTextBoxColumn
-            // 
-            this.dbtipstsDataGridViewTextBoxColumn.DataPropertyName = "db_tipsts";
-            this.dbtipstsDataGridViewTextBoxColumn.HeaderText = "db_tipsts";
-            this.dbtipstsDataGridViewTextBoxColumn.Name = "dbtipstsDataGridViewTextBoxColumn";
-            // 
-            // dbsumdateDataGridViewTextBoxColumn
-            // 
-            this.dbsumdateDataGridViewTextBoxColumn.DataPropertyName = "db_sumdate";
-            this.dbsumdateDataGridViewTextBoxColumn.HeaderText = "db_sumdate";
-            this.dbsumdateDataGridViewTextBoxColumn.Name = "dbsumdateDataGridViewTextBoxColumn";
-            // 
-            // dbsumcashDataGridViewTextBoxColumn
-            // 
-            this.dbsumcashDataGridViewTextBoxColumn.DataPropertyName = "db_sumcash";
-            this.dbsumcashDataGridViewTextBoxColumn.HeaderText = "db_sumcash";
-            this.dbsumcashDataGridViewTextBoxColumn.Name = "dbsumcashDataGridViewTextBoxColumn";
-            // 
-            // dbmestoDataGridViewTextBoxColumn
-            // 
-            this.dbmestoDataGridViewTextBoxColumn.DataPropertyName = "db_mesto";
-            this.dbmestoDataGridViewTextBoxColumn.HeaderText = "db_mesto";
-            this.dbmestoDataGridViewTextBoxColumn.Name = "dbmestoDataGridViewTextBoxColumn";
-            // 
-            // dbuserDataGridViewTextBoxColumn
-            // 
-            this.dbuserDataGridViewTextBoxColumn.DataPropertyName = "db_user";
-            this.dbuserDataGridViewTextBoxColumn.HeaderText = "db_user";
-            this.dbuserDataGridViewTextBoxColumn.Name = "dbuserDataGridViewTextBoxColumn";
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Transparent;
+            this.button3.Image = global::BusStopWP.Properties.Resources.icons8exit;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(3, 464);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(264, 46);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "             Выход";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // FormDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.ClientSize = new System.Drawing.Size(1184, 662);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.siderbarContainer);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormDB";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "636363636363636363636363636363636363636363636363636363636363636363636363636363636" +
@@ -507,7 +572,6 @@ namespace BusStopWP
             this.siderbarContainer.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panelData.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -517,13 +581,14 @@ namespace BusStopWP
             this.groupBox1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
             this.ResumeLayout(false);
 
         }

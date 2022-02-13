@@ -12,7 +12,6 @@ C:\Users\Dell\source\repos\busStop\BusStopWP\obj\Debug\BusStopWP.FormAdmin.resou
 D:\git\stopBus\BusStopWP\BusStopWP\bin\Debug\BusStopWP.exe.config
 D:\git\stopBus\BusStopWP\BusStopWP\bin\Debug\BusStopWP.exe
 D:\git\stopBus\BusStopWP\BusStopWP\bin\Debug\BusStopWP.pdb
-D:\git\stopBus\BusStopWP\BusStopWP\obj\Debug\BusStopWP.csproj.AssemblyReference.cache
 D:\git\stopBus\BusStopWP\BusStopWP\obj\Debug\BusStopWP.csproj.SuggestedBindingRedirects.cache
 D:\git\stopBus\BusStopWP\BusStopWP\obj\Debug\BusStopWP.Form1.resources
 D:\git\stopBus\BusStopWP\BusStopWP\obj\Debug\BusStopWP.FormAdmin.resources
@@ -24,3 +23,6 @@ D:\git\stopBus\BusStopWP\BusStopWP\obj\Debug\BusStopWP.exe
 D:\git\stopBus\BusStopWP\BusStopWP\obj\Debug\BusStopWP.pdb
 C:\Users\Dell\source\repos\busStop\BusStopWP\bin\Debug\busstop.mdb
 C:\Users\Dell\source\repos\busStop\BusStopWP\obj\Debug\BusStopWP.FormDB.resources
+D:\git\stopBus\BusStopWP\BusStopWP\bin\Debug\busstop.mdb
+D:\git\stopBus\BusStopWP\BusStopWP\obj\Debug\BusStopWP.csproj.AssemblyReference.cache
+D:\git\stopBus\BusStopWP\BusStopWP\obj\Debug\BusStopWP.FormAdd.resources

@@ -19,6 +19,7 @@ namespace BusStopWP
         {
             InitializeComponent();
             myConnection = new OleDbConnection(connect);
+            myConnection.Open();
         }
 
         OleDbCommand cmd = new OleDbCommand();
@@ -38,7 +39,7 @@ namespace BusStopWP
 
         private void buttonInput_Click(object sender, EventArgs e)
         {
-            myConnection.Open();
+            
             string query = "SELECT * FROM db_users WHERE id_user = '" + textUser.Text + "' AND id_password = '" + textPassword.Text + "'";
             cmd = new OleDbCommand(query, myConnection);
             cmd2 = new OleDbCommand(query, myConnection);
@@ -65,6 +66,11 @@ namespace BusStopWP
             }
 
 
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -98,7 +98,7 @@ namespace BusStopWP
             this.checkPassword.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkPassword.Location = new System.Drawing.Point(128, 221);
             this.checkPassword.Name = "checkPassword";
-            this.checkPassword.Size = new System.Drawing.Size(119, 20);
+            this.checkPassword.Size = new System.Drawing.Size(118, 20);
             this.checkPassword.TabIndex = 3;
             this.checkPassword.Text = "Показать пароль";
             this.checkPassword.UseVisualStyleBackColor = true;
@@ -168,10 +168,11 @@ namespace BusStopWP
             this.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

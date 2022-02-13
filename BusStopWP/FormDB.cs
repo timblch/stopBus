@@ -7,17 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace BusStopWP
 {
     public partial class FormDB : Form
     {
         bool sidebarExpand;
+        public static string connect = "Provider=Microsoft.Jet.OLEDB.4.0;Data source=busstop.mdb;";
+        public OleDbConnection myConnection;
         public FormDB()
         {
             InitializeComponent();
             panelData.Hide();
             panelStatus.Hide();
+            this.dataGridView1.DefaultCellStyle.Font = new Font("Arial", 10);
+            this.dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10);
+            myConnection = new OleDbConnection(connect);
+            myConnection.Open();
         }
 
         private void siderTimer_Tick(object sender, EventArgs e)
@@ -41,7 +48,8 @@ namespace BusStopWP
                 siderbarContainer.Width += 10;
                 dataGridView1.Location = new Point(205, 65);
                 dataGridView1.Width -= 10;
-                
+
+
                 panelData.Show();
                 panelStatus.Show();
                 if (siderbarContainer.Width == siderbarContainer.MaximumSize.Width)
@@ -90,6 +98,52 @@ namespace BusStopWP
             // TODO: данная строка кода позволяет загрузить данные в таблицу "busstopDataSet.db_bus". При необходимости она может быть перемещена или удалена.
             this.db_busTableAdapter.Fill(this.busstopDataSet.db_bus);
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormAdd form = new FormAdd();
+            form.Owner = this;
+            form.ShowDialog();
+        }
+
+        private void click_seach_Click(object sender, EventArgs e)
+        {
+            string kod = textBox_fio.Text;
+            string query = $"SELECT * FROM db_bus WHERE db_name LIKE '%{kod}%'";
+            OleDbDataAdapter command = new OleDbDataAdapter(query, myConnection);
+            DataTable dt = new DataTable();
+            command.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        public void gridUpdate()
+        {
+            this.db_busTableAdapter.Fill(this.busstopDataSet.db_bus);
+            MessageBox.Show("Данные загружены");
+            this.db_busTableAdapter.Fill(this.busstopDataSet.db_bus);
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                myConnection.Open();
+            }
+            catch
+            {
+                int kod = Convert.ToInt32(textBox1.Text);
+                string query = $"UPDATE db_bus SET db_status = 'Продлено' WHERE Код={kod}";
+
+                OleDbCommand command = new OleDbCommand(query, myConnection);
+                command.ExecuteNonQuery();
+                this.db_busTableAdapter.Fill(this.busstopDataSet.db_bus);
+                MessageBox.Show("Стоянка машины продлена");
+                this.db_busTableAdapter.Fill(this.busstopDataSet.db_bus);
+
+            }
         }
     }
 }

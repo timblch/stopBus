@@ -355,6 +355,7 @@ namespace busStop
             this.button_add_tarif.TabIndex = 1;
             this.button_add_tarif.Text = "Добавить тариф";
             this.button_add_tarif.UseVisualStyleBackColor = true;
+            this.button_add_tarif.Click += new System.EventHandler(this.button_add_tarif_Click);
             // 
             // comboBox1
             // 
@@ -403,6 +404,7 @@ namespace busStop
             this.button_add_date.TabIndex = 3;
             this.button_add_date.Text = "Отметить выезд";
             this.button_add_date.UseVisualStyleBackColor = true;
+            this.button_add_date.Click += new System.EventHandler(this.button_add_date_Click);
             // 
             // textBox8
             // 

@@ -185,5 +185,15 @@ namespace busStop
         {
             this.db_busTableAdapter.Fill(this.busDataSet1.db_bus);
         }
+
+        private void button_add_date_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_add_tarif_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

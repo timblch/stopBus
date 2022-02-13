@@ -23,3 +23,16 @@ C:\Users\Dell\source\repos\busStop\busStop\bin\Debug\bus.mdb
 D:\git\stopBus\busStop\bin\Debug\bus.mdb
 D:\git\stopBus\busStop\obj\Debug\busStop.Form2.resources
 C:\Users\Dell\source\repos\busStop\busStop\obj\Debug\busStop.Form2.resources
+D:\git\stopBus\BusStopWP\busStop\bin\Debug\bus.mdb
+D:\git\stopBus\BusStopWP\busStop\bin\Debug\busStop.exe.config
+D:\git\stopBus\BusStopWP\busStop\bin\Debug\busStop.exe
+D:\git\stopBus\BusStopWP\busStop\bin\Debug\busStop.pdb
+D:\git\stopBus\BusStopWP\busStop\obj\Debug\busStop.csproj.AssemblyReference.cache
+D:\git\stopBus\BusStopWP\busStop\obj\Debug\busStop.csproj.SuggestedBindingRedirects.cache
+D:\git\stopBus\BusStopWP\busStop\obj\Debug\busStop.Form1.resources
+D:\git\stopBus\BusStopWP\busStop\obj\Debug\busStop.Form2.resources
+D:\git\stopBus\BusStopWP\busStop\obj\Debug\busStop.Properties.Resources.resources
+D:\git\stopBus\BusStopWP\busStop\obj\Debug\busStop.csproj.GenerateResource.cache
+D:\git\stopBus\BusStopWP\busStop\obj\Debug\busStop.csproj.CoreCompileInputs.cache
+D:\git\stopBus\BusStopWP\busStop\obj\Debug\busStop.exe
+D:\git\stopBus\BusStopWP\busStop\obj\Debug\busStop.pdb
