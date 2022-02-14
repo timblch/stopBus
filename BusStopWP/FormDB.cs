@@ -16,7 +16,8 @@ namespace BusStopWP
         bool sidebarExpand;
         public static string connect = "Provider=Microsoft.Jet.OLEDB.4.0;Data source=busstop.mdb;";
         public OleDbConnection myConnection;
-        public FormDB()
+        public string userName; 
+        public FormDB(string user)
         {
             InitializeComponent();
             panelData.Hide();
@@ -25,7 +26,10 @@ namespace BusStopWP
             this.dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10);
             myConnection = new OleDbConnection(connect);
             myConnection.Open();
+            userName = user;
         }
+
+
 
         private void siderTimer_Tick(object sender, EventArgs e)
         {
@@ -95,14 +99,18 @@ namespace BusStopWP
 
         private void FormDB_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "busstopDataSet2.db_bus". При необходимости она может быть перемещена или удалена.
+            this.db_busTableAdapter2.Fill(this.busstopDataSet2.db_bus);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "busstopDataSet1.db_bus". При необходимости она может быть перемещена или удалена.
+           // this.db_busTableAdapter1.Fill(this.busstopDataSet1.db_bus);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "busstopDataSet.db_bus". При необходимости она может быть перемещена или удалена.
-            this.db_busTableAdapter.Fill(this.busstopDataSet.db_bus);
+           // this.db_busTableAdapter.Fill(this.busstopDataSet.db_bus);
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormAdd form = new FormAdd();
+            FormAdd form = new FormAdd(userName);
             form.Owner = this;
             form.ShowDialog();
         }
@@ -119,9 +127,9 @@ namespace BusStopWP
 
         public void gridUpdate()
         {
-            this.db_busTableAdapter.Fill(this.busstopDataSet.db_bus);
+            this.db_busTableAdapter2.Fill(this.busstopDataSet2.db_bus);
             MessageBox.Show("Данные загружены");
-            this.db_busTableAdapter.Fill(this.busstopDataSet.db_bus);
+            this.db_busTableAdapter2.Fill(this.busstopDataSet2.db_bus);
 
 
         }
@@ -139,11 +147,47 @@ namespace BusStopWP
 
                 OleDbCommand command = new OleDbCommand(query, myConnection);
                 command.ExecuteNonQuery();
-                this.db_busTableAdapter.Fill(this.busstopDataSet.db_bus);
+                this.db_busTableAdapter2.Fill(this.busstopDataSet2.db_bus);
                 MessageBox.Show("Стоянка машины продлена");
-                this.db_busTableAdapter.Fill(this.busstopDataSet.db_bus);
+                this.db_busTableAdapter2.Fill(this.busstopDataSet2.db_bus);
 
             }
+        }
+
+        private void textBox10_Click(object sender, EventArgs e)
+        {
+            textBox10.Text = "";
+
+        }
+
+
+
+
+        private void textBox7_Click_1(object sender, EventArgs e)
+        {
+            textBox7.Text = "";
+        }
+
+        private void siderbarContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void siderbarContainer_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Text = "Код";
+            textBox7.Text = "Код";
+            textBox10.Text = "Количество суток";
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+        }
+
+        private void button_add_date_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

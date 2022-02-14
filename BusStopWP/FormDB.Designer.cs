@@ -33,7 +33,9 @@ namespace BusStopWP
             this.siderbarContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuButton = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelData = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -44,16 +46,16 @@ namespace BusStopWP
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.siderTimer = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.textBox_fio = new System.Windows.Forms.TextBox();
             this.textBox_gosnumber = new System.Windows.Forms.TextBox();
             this.click_seach = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dbbusBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.busstopDataSet = new BusStopWP.busstopDataSet();
-            this.db_busTableAdapter = new BusStopWP.busstopDataSetTableAdapters.db_busTableAdapter();
             this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dbnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dbadressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,26 +70,34 @@ namespace BusStopWP
             this.dbsumcashDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dbmestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dbuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.menuButton = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.dbbusBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.busstopDataSet = new BusStopWP.busstopDataSet();
+            this.db_busTableAdapter = new BusStopWP.busstopDataSetTableAdapters.db_busTableAdapter();
+            this.busstopDataSet1 = new BusStopWP.busstopDataSet1();
+            this.dbbusBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.db_busTableAdapter1 = new BusStopWP.busstopDataSet1TableAdapters.db_busTableAdapter();
+            this.busstopDataSet2 = new BusStopWP.busstopDataSet2();
+            this.dbbusBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.db_busTableAdapter2 = new BusStopWP.busstopDataSet2TableAdapters.db_busTableAdapter();
             this.siderbarContainer.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelData.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panelStatus.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // siderbarContainer
@@ -106,6 +116,8 @@ namespace BusStopWP
             this.siderbarContainer.Name = "siderbarContainer";
             this.siderbarContainer.Size = new System.Drawing.Size(76, 662);
             this.siderbarContainer.TabIndex = 0;
+            this.siderbarContainer.Click += new System.EventHandler(this.siderbarContainer_Click_1);
+            this.siderbarContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.siderbarContainer_Paint);
             // 
             // panel1
             // 
@@ -126,6 +138,18 @@ namespace BusStopWP
             this.label1.TabIndex = 1;
             this.label1.Text = "Меню";
             // 
+            // menuButton
+            // 
+            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menuButton.Image = global::BusStopWP.Properties.Resources.icons8menu;
+            this.menuButton.Location = new System.Drawing.Point(23, 38);
+            this.menuButton.Name = "menuButton";
+            this.menuButton.Size = new System.Drawing.Size(30, 27);
+            this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.menuButton.TabIndex = 0;
+            this.menuButton.TabStop = false;
+            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.button1);
@@ -133,6 +157,22 @@ namespace BusStopWP
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(197, 35);
             this.panel2.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Image = global::BusStopWP.Properties.Resources.iconsplus30;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(-5, -4);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(264, 46);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "             Добавить";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panelData
             // 
@@ -176,6 +216,7 @@ namespace BusStopWP
             this.button_add_date.TabIndex = 3;
             this.button_add_date.Text = "Отметить выезд";
             this.button_add_date.UseVisualStyleBackColor = true;
+            this.button_add_date.Click += new System.EventHandler(this.button_add_date_Click);
             // 
             // textBox7
             // 
@@ -185,6 +226,7 @@ namespace BusStopWP
             this.textBox7.Size = new System.Drawing.Size(179, 22);
             this.textBox7.TabIndex = 0;
             this.textBox7.Text = "Код";
+            this.textBox7.Click += new System.EventHandler(this.textBox7_Click_1);
             // 
             // panelStatus
             // 
@@ -228,6 +270,7 @@ namespace BusStopWP
             this.textBox1.Size = new System.Drawing.Size(179, 22);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Код";
+            this.textBox1.Click += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox10
             // 
@@ -236,6 +279,24 @@ namespace BusStopWP
             this.textBox10.Size = new System.Drawing.Size(179, 22);
             this.textBox10.TabIndex = 8;
             this.textBox10.Text = "Количество суток";
+            this.textBox10.Click += new System.EventHandler(this.textBox10_Click);
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Transparent;
+            this.button3.Image = global::BusStopWP.Properties.Resources.icons8exit;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(3, 464);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(264, 46);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "             Выход";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // siderTimer
             // 
@@ -252,6 +313,29 @@ namespace BusStopWP
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(91, 27);
             this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::BusStopWP.Properties.Resources.iconssize;
+            this.pictureBox1.Location = new System.Drawing.Point(64, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::BusStopWP.Properties.Resources.icons8minsize;
+            this.pictureBox2.Location = new System.Drawing.Point(25, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -322,26 +406,12 @@ namespace BusStopWP
             this.dbsumcashDataGridViewTextBoxColumn,
             this.dbmestoDataGridViewTextBoxColumn,
             this.dbuserDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.dbbusBindingSource;
+            this.dataGridView1.DataSource = this.dbbusBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(81, 65);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1101, 584);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // dbbusBindingSource
-            // 
-            this.dbbusBindingSource.DataMember = "db_bus";
-            this.dbbusBindingSource.DataSource = this.busstopDataSet;
-            // 
-            // busstopDataSet
-            // 
-            this.busstopDataSet.DataSetName = "busstopDataSet";
-            this.busstopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // db_busTableAdapter
-            // 
-            this.db_busTableAdapter.ClearBeforeFill = true;
             // 
             // кодDataGridViewTextBoxColumn
             // 
@@ -483,73 +553,47 @@ namespace BusStopWP
             this.dbuserDataGridViewTextBoxColumn.ReadOnly = true;
             this.dbuserDataGridViewTextBoxColumn.Width = 250;
             // 
-            // pictureBox1
+            // dbbusBindingSource
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::BusStopWP.Properties.Resources.iconssize;
-            this.pictureBox1.Location = new System.Drawing.Point(64, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.dbbusBindingSource.DataMember = "db_bus";
+            this.dbbusBindingSource.DataSource = this.busstopDataSet;
             // 
-            // pictureBox2
+            // busstopDataSet
             // 
-            this.pictureBox2.Image = global::BusStopWP.Properties.Resources.icons8minsize;
-            this.pictureBox2.Location = new System.Drawing.Point(25, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.busstopDataSet.DataSetName = "busstopDataSet";
+            this.busstopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // menuButton
+            // db_busTableAdapter
             // 
-            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menuButton.Image = global::BusStopWP.Properties.Resources.icons8menu;
-            this.menuButton.Location = new System.Drawing.Point(23, 38);
-            this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(30, 27);
-            this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.menuButton.TabIndex = 0;
-            this.menuButton.TabStop = false;
-            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
+            this.db_busTableAdapter.ClearBeforeFill = true;
             // 
-            // button1
+            // busstopDataSet1
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = global::BusStopWP.Properties.Resources.iconsplus30;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-5, -4);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(264, 46);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "             Добавить";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.busstopDataSet1.DataSetName = "busstopDataSet1";
+            this.busstopDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button3
+            // dbbusBindingSource1
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Image = global::BusStopWP.Properties.Resources.icons8exit;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(3, 464);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(264, 46);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "             Выход";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.dbbusBindingSource1.DataMember = "db_bus";
+            this.dbbusBindingSource1.DataSource = this.busstopDataSet1;
+            // 
+            // db_busTableAdapter1
+            // 
+            this.db_busTableAdapter1.ClearBeforeFill = true;
+            // 
+            // busstopDataSet2
+            // 
+            this.busstopDataSet2.DataSetName = "busstopDataSet2";
+            this.busstopDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dbbusBindingSource2
+            // 
+            this.dbbusBindingSource2.DataMember = "db_bus";
+            this.dbbusBindingSource2.DataSource = this.busstopDataSet2;
+            // 
+            // db_busTableAdapter2
+            // 
+            this.db_busTableAdapter2.ClearBeforeFill = true;
             // 
             // FormDB
             // 
@@ -563,7 +607,7 @@ namespace BusStopWP
             this.Controls.Add(this.siderbarContainer);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormDB";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "636363636363636363636363636363636363636363636363636363636363636363636363636363636" +
@@ -572,6 +616,7 @@ namespace BusStopWP
             this.siderbarContainer.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panelData.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -581,14 +626,17 @@ namespace BusStopWP
             this.groupBox1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.busstopDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbbusBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -638,5 +686,11 @@ namespace BusStopWP
         private System.Windows.Forms.DataGridViewTextBoxColumn dbsumcashDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dbmestoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dbuserDataGridViewTextBoxColumn;
+        private busstopDataSet1 busstopDataSet1;
+        private System.Windows.Forms.BindingSource dbbusBindingSource1;
+        private busstopDataSet1TableAdapters.db_busTableAdapter db_busTableAdapter1;
+        private busstopDataSet2 busstopDataSet2;
+        private System.Windows.Forms.BindingSource dbbusBindingSource2;
+        private busstopDataSet2TableAdapters.db_busTableAdapter db_busTableAdapter2;
     }
 }

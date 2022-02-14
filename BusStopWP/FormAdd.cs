@@ -15,15 +15,20 @@ namespace BusStopWP
     {
         public static string connect = "Provider=Microsoft.Jet.OLEDB.4.0;Data source=busstop.mdb;";
         public OleDbConnection myConnection;
-        public FormAdd()
+        public string userIn;
+        public FormAdd(string user)
         {
             InitializeComponent();
             myConnection = new OleDbConnection(connect);
             myConnection.Open();
+            userIn = user;
         }
+
 
         private void button_add_auto_Click(object sender, EventArgs e)
         {
+            //Form1 form1 = new Form1();
+            //string user = form1.user;
             string name = textBox1.Text;
             string gosnumber = textBox2.Text;
             string markaAuto = textBox3.Text;
@@ -42,7 +47,7 @@ namespace BusStopWP
 
 
             //string b = "Mazda";
-            string query = $"INSERT INTO db_bus (db_name, db_gosnumber, db_marka, db_model, db_sumdate, db_status, db_date_v, db_date_vv, db_adress, db_mesto) VALUES ('{name}', '{gosnumber}', '{markaAuto}', '{modelAuto}', '{sumday}', 'Стоит', '{this.dateTimePicker1.Text}', '{addd.ToString()}', '{adress}', '{mesto}')";
+            string query = $"INSERT INTO db_bus (db_name, db_gosnumber, db_marka, db_model, db_sumdate, db_status, db_date_v, db_date_vv, db_adress, db_mesto, db_user) VALUES ('{name}', '{gosnumber}', '{markaAuto}', '{modelAuto}', '{sumday}', 'Стоит', '{this.dateTimePicker1.Text}', '{addd.ToString()}', '{adress}', '{mesto}', '{userIn}')";
 
             OleDbCommand command = new OleDbCommand(query, myConnection);
 
