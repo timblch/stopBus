@@ -13,7 +13,7 @@ namespace BusStopWP
 {
     public partial class FormAdmin : Form
     {
-        public static string connect = "Provider=Microsoft.Jet.OLEDB.4.0;Data source=bus.mdb;";
+        public static string connect = "Provider=Microsoft.Jet.OLEDB.4.0;Data source=busstop.mdb;";
         public OleDbConnection myConnection;
         public FormAdmin()
         {

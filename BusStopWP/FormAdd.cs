@@ -15,34 +15,81 @@ namespace BusStopWP
     {
         public static string connect = "Provider=Microsoft.Jet.OLEDB.4.0;Data source=busstop.mdb;";
         public OleDbConnection myConnection;
-        public FormAdd()
+        public string userIn;
+        public int tarifOut;
+        public int sumOut;
+        public int sumCashOut;
+
+
+        public FormAdd(string user)
         {
             InitializeComponent();
             myConnection = new OleDbConnection(connect);
             myConnection.Open();
+            userIn = user;
+        }
+
+        /// ///////Вывод из списка
+
+        private void comboBox2_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM db_car";
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+            command.CommandText = query;
+
+            OleDbDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                comboBox2.Items.Add(reader["db_car_en"].ToString());
+            }
+        }
+
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM db_tipsts";
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+            command.CommandText = query;
+
+            OleDbDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                comboBox1.Items.Add(reader["db_tsname"].ToString());
+                //label10.Text = reader["db_tarif"].ToString();
+            }
+
+        }
+
+        public void Sum()
+        {
+
+
         }
 
         private void button_add_auto_Click(object sender, EventArgs e)
         {
+            //Form1 form1 = new Form1();
+            //string user = form1.user;
             string name = textBox1.Text;
             string gosnumber = textBox2.Text;
-            string markaAuto = textBox3.Text;
+            string markaAuto = comboBox2.Text;
             string modelAuto = textBox4.Text;
             string adress = textBox6.Text;
             string mesto = textBox7.Text;
-
+            string tsname = comboBox1.Text;
+            
+            
             // Добавление к дате количества суток
             int sumday = Convert.ToInt32(textBox5.Text);
             DateTime mdate = this.dateTimePicker1.Value;
             DateTime addd = mdate.AddDays(sumday);
             //label9.Text = addd.ToString();
 
-
+            sumOut = sumday;
 
 
 
             //string b = "Mazda";
-            string query = $"INSERT INTO db_bus (db_name, db_gosnumber, db_marka, db_model, db_sumdate, db_status, db_date_v, db_date_vv, db_adress, db_mesto) VALUES ('{name}', '{gosnumber}', '{markaAuto}', '{modelAuto}', '{sumday}', 'Стоит', '{this.dateTimePicker1.Text}', '{addd.ToString()}', '{adress}', '{mesto}')";
+            string query = $"INSERT INTO db_bus (db_name, db_gosnumber, db_marka, db_model, db_sumdate, db_status, db_date_v, db_date_vv, db_adress, db_mesto, db_user, db_tipsts, db_sumcash) VALUES ('{name}', '{gosnumber}', '{markaAuto}', '{modelAuto}', '{sumday}', 'Стоит', '{this.dateTimePicker1.Text}', '{addd.ToString()}', '{adress}', '{mesto}', '{userIn}', '{tsname}', '{sumCashOut}')";
 
             OleDbCommand command = new OleDbCommand(query, myConnection);
 
@@ -55,6 +102,51 @@ namespace BusStopWP
             FormDB form = this.Owner as FormDB;
 
             form.gridUpdate();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM db_tipsts WHERE db_tsname='" + comboBox1.Text + "'";
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+            command.CommandText = query;
+
+            OleDbDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+
+                string tarif;
+                tarif = reader["db_tarif"].ToString();
+                label10.Text = tarif;
+                //tarifOut = tarif;
+                tarifOut = int.Parse(tarif);
+
+
+            }
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+            try
+            {
+                sumOut = Convert.ToInt32(textBox5.Text);
+                int sumcash = tarifOut * sumOut;
+                label13.Text = sumcash.ToString();
+                sumCashOut = sumcash;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Введите цифры в поле - Количестов суток");
+            }
+            
+            
+
+        }
+
+        private void textBox5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

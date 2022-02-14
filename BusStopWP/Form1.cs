@@ -13,8 +13,9 @@ namespace BusStopWP
 {
     public partial class Form1 : Form
     {
-        public static string connect = "Provider=Microsoft.Jet.OLEDB.4.0;Data source=bus.mdb;";
+        public static string connect = "Provider=Microsoft.Jet.OLEDB.4.0;Data source=busstop.mdb;";
         public OleDbConnection myConnection;
+        public string user;
         public Form1()
         {
             InitializeComponent();
@@ -46,6 +47,7 @@ namespace BusStopWP
             OleDbDataReader ole = cmd.ExecuteReader();
             OleDbDataReader ole2 = cmd2.ExecuteReader();
             string masteruser = "admin";
+            user = textUser.Text;
 
             if (ole.Read() == true & textUser.Text == masteruser)
             {
@@ -55,7 +57,9 @@ namespace BusStopWP
 
             else if (ole2.Read() == true)
             {
-                new FormDB().Show();
+                
+                new FormDB(user).Show();
+                //new FormAdd();
                 this.Hide();
             }
 

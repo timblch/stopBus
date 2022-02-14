@@ -36,3 +36,15 @@ D:\git\stopBus\BusStopWP\busStop\obj\Debug\busStop.csproj.GenerateResource.cache
 D:\git\stopBus\BusStopWP\busStop\obj\Debug\busStop.csproj.CoreCompileInputs.cache
 D:\git\stopBus\BusStopWP\busStop\obj\Debug\busStop.exe
 D:\git\stopBus\BusStopWP\busStop\obj\Debug\busStop.pdb
+C:\Users\Dell\source\repos\busStopWP\busStop\bin\Debug\bus.mdb
+C:\Users\Dell\source\repos\busStopWP\busStop\bin\Debug\busStop.exe.config
+C:\Users\Dell\source\repos\busStopWP\busStop\bin\Debug\busStop.exe
+C:\Users\Dell\source\repos\busStopWP\busStop\bin\Debug\busStop.pdb
+C:\Users\Dell\source\repos\busStopWP\busStop\obj\Debug\busStop.csprojAssemblyReference.cache
+C:\Users\Dell\source\repos\busStopWP\busStop\obj\Debug\busStop.Form1.resources
+C:\Users\Dell\source\repos\busStopWP\busStop\obj\Debug\busStop.Form2.resources
+C:\Users\Dell\source\repos\busStopWP\busStop\obj\Debug\busStop.Properties.Resources.resources
+C:\Users\Dell\source\repos\busStopWP\busStop\obj\Debug\busStop.csproj.GenerateResource.cache
+C:\Users\Dell\source\repos\busStopWP\busStop\obj\Debug\busStop.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\busStopWP\busStop\obj\Debug\busStop.exe
+C:\Users\Dell\source\repos\busStopWP\busStop\obj\Debug\busStop.pdb

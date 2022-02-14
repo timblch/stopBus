@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,6 +52,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>busstopDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="busstopDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>busstopDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="busstopDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>busstopDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -109,6 +121,28 @@
     </None>
     <None Include="busstopDataSet.xss">
       <DependentUpon>busstopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="busstopDataSet1.xsc">
+      <DependentUpon>busstopDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="busstopDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>busstopDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="busstopDataSet1.xss">
+      <DependentUpon>busstopDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="busstopDataSet2.xsc">
+      <DependentUpon>busstopDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="busstopDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>busstopDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="busstopDataSet2.xss">
+      <DependentUpon>busstopDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
